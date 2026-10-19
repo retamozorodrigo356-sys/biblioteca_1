@@ -54,11 +54,25 @@ final class Flash
             return [];
         }
 
-        if (array_is_list($messages)) {
+        if (self::esLista($messages)) {
             return array_values($messages);
         }
 
         return $messages;
+    }
+
+    /** Reemplazo de array_is_list() (PHP 8.1+) compatible con PHP 8.0. */
+    private static function esLista(array $array): bool
+    {
+        $i = 0;
+        foreach ($array as $clave => $_) {
+            if ($clave !== $i) {
+                return false;
+            }
+            $i++;
+        }
+
+        return true;
     }
 
     /**

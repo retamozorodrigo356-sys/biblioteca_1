@@ -15,6 +15,7 @@ $userRole = is_array($_SESSION['user'] ?? null)
     <div class="student-header-inner">
         <a class="student-brand" href="<?= $escape(Url::to($userRole === 'estudiante' ? '/home' : '/catalogo')) ?>">BiblioTech</a>
         <nav class="student-nav" aria-label="Navegación principal">
+            <a href="<?= $escape(Url::to($userRole === '' || $userRole === 'estudiante' ? '/home' : '/catalogo')) ?>">Inicio</a>
             <a class="<?= $activePage === 'catalogo' ? 'active' : '' ?>" href="<?= $escape(Url::to('/catalogo')) ?>">Catálogo</a>
             <?php if ($userRole === 'estudiante'): ?>
                 <a class="<?= $activePage === 'reservas' ? 'active' : '' ?>" href="<?= $escape(Url::to('/mis-reservas')) ?>">Mis reservas</a>
@@ -29,8 +30,8 @@ $userRole = is_array($_SESSION['user'] ?? null)
                     <button class="student-logout" type="submit">Salir</button>
                 </form>
             <?php else: ?>
-                <a class="student-user-name" href="<?= $escape(Url::to('/login')) ?>">Iniciar sesión</a>
-                <a class="student-logout" href="<?= $escape(Url::to('/register')) ?>">Crear cuenta</a>
+                <a class="student-user-name" href="<?= $escape(Url::to('/login')) ?>">Login</a>
+                <a class="student-logout" href="<?= $escape(Url::to('/register')) ?>">Registro</a>
             <?php endif; ?>
         </div>
     </div>

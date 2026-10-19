@@ -18,7 +18,7 @@ $libros = $pageData['libros'];
 <body>
 <?php $activePage = 'catalogo'; require __DIR__ . '/_header.php'; ?>
 <main class="student-main">
-    <section class="page-intro">
+    <section class="page-intro intro-center">
         <p class="eyebrow">Explora y descubre</p>
         <h1>Catálogo de libros</h1>
         <p>Encuentra tu próxima lectura entre nuestros títulos disponibles.</p>
@@ -30,6 +30,8 @@ $libros = $pageData['libros'];
     <?php if (!empty($flash['error'])): ?>
         <p class="alert alert-error" role="alert"><?= $escape($flash['error']) ?></p>
     <?php endif; ?>
+
+    <p class="result-count"><?= (int) $pageData['total'] ?> resultado(s)</p>
 
     <?php if ($libros === []): ?>
         <div class="empty-state">

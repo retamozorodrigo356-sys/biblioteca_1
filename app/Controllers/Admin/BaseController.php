@@ -33,7 +33,7 @@ abstract class BaseController
         ]);
     }
 
-    protected function redirigir(string $ruta): never
+    protected function redirigir(string $ruta): void
     {
         header('Location: ' . Url::to($ruta));
         exit;

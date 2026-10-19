@@ -36,7 +36,7 @@ abstract class BaseController
         ], 'bibliotecario/layout');
     }
 
-    protected function redirigir(string $ruta): never
+    protected function redirigir(string $ruta): void
     {
         header('Location: ' . Url::to($ruta));
         exit;

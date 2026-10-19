@@ -82,8 +82,10 @@ final class View
     public static function badge(string $valor, ?string $texto = null): string
     {
         $clase = match ($valor) {
-            'activo', 'pagada', 'confirmada', 'devuelto', 'estudiante' => 'ok',
-            'pendiente', 'bibliotecario' => 'warn',
+            'activo', 'pagada', 'confirmada', 'devuelto' => 'ok',
+            'estudiante' => 'muted',
+            'bibliotecario' => 'info',
+            'pendiente' => 'warn',
             'vencido', 'bloqueado', 'expirada' => 'bad',
             'administrador' => 'brand',
             default => 'muted',

@@ -5,10 +5,10 @@ use App\Core\View;
 
 $menu = [
     'dashboard' => ['Inicio', '/bibliotecario'],
+    'catalogo' => ['Catálogo', '/catalogo'],
     'libros' => ['Libros', '/bibliotecario/libros'],
     'prestamos' => ['Préstamos', '/bibliotecario/prestamos'],
     'reservas' => ['Reservas', '/bibliotecario/reservas'],
-    'multas' => ['Multas', '/bibliotecario/multas'],
 ];
 ?>
 <header class="librarian-header">

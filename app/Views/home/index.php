@@ -116,6 +116,7 @@ $catalogLabel = $userRole === 'bibliotecario' ? 'Ver catálogo' : 'Comenzar Ahor
 
 <footer class="site-footer">
     <p>© <?= date('Y') ?> BiblioTech <span aria-hidden="true">·</span> Un espacio para cada historia.</p>
+    <span class="footer-note">Desarrollado sobre entorno LAMP</span>
 </footer>
 </body>
 </html>

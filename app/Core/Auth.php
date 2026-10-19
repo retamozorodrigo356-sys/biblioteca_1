@@ -34,7 +34,8 @@ final class Auth
         return $user;
     }
 
-    public static function redirect(string $path): never
+    /** @return never|void Return type `never` requires PHP 8.1; this project runs on PHP 8.0. */
+    public static function redirect(string $path): void
     {
         header('Location: ' . Url::to($path));
         exit;
